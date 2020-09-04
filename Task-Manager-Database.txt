@@ -1,0 +1,21 @@
+USER TABLE
+
+create table user (
+
+userid int(10) AUTO_INCREMENT,
+username varchar(50),
+email varchar(50),
+password varchar(50),
+PRIMARY KEY (userid)
+);
+
+======================
+TASK TABLE 
+
+create table task (
+taskid int(10) AUTO_INCREMENT,
+task varchar(50),
+PRIMARY KEY (taskid)
+);
+
+ 
