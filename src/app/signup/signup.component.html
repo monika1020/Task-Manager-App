@@ -1,0 +1,116 @@
+<div class="container-fluid">
+    <div class="desktop">
+        <div class="row" style="height:100px; color:white;">
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <!---1 Part----->
+        <div class="row mt-3 justify-content-center ">
+            <div class="col-12 col-md-6 d-flex flex-column" style="color:white;">
+                <div class="row ">
+                    <div class="col-6 flex-column d-flex justify-content-center align-items-center "
+                        style="color:white; background: linear-gradient(#e96710,rgb(255, 0, 55),#ff008c);height:445px;">
+                        <div class="row mt-4 justify-content-center">
+                            <div class="col d-flex justify-content-center align-items-center"
+                                style="font-weight: bold; font-size:30px; font-family:'poppins',sans-serif;">
+                                Welcome Back!</div>
+                        </div>
+                        <div class="row mt-3 ">
+                            <div class="col ">
+                                To keep connected with us please login with your personal info</div>
+                        </div>
+                        <div class="row mt-3 justify-content-center">
+                            <div class="col-12 p-0"><button class="btn btn-outline-primary btn-block"
+                                    (click)="SigninHere()"
+                                    style="color:white; padding:8px 25px; font-weight: bold;  ">SIGN
+                                    IN</button></div>
+                        </div>
+
+                    </div>
+                    <!---2 part---->
+                    <div class="col-6 " [formGroup]="fbFormGroup"
+                        style="background:rgba(255,255,255,0.07);height:445px; padding:2px;">
+
+                        <div class="row mt-3">
+                            <div class="col d-flex  justify-content-center align-items-center"
+                                style="font-weight: bold; font-size:30px;  font-family:'poppins',sans-serif;">Create
+                                Account
+                            </div>
+                        </div>
+
+                        <div class="row  mt-1 justify-content-center " style="font-size:15px;">
+                            <div class="col-md-6">
+                                <div class="row justify-content-center" id="social-media">
+                                    <div class="col " id="fb" style=" font-size:25px;">
+                                        <fa-icon [icon]="faFacebook"></fa-icon>
+
+                                    </div>
+                                    <div class="col" id="google" style=" font-size:25px;">
+                                        <fa-icon [icon]="faGoogle"></fa-icon>
+                                    </div>
+                                    <div class="col" id="linkedin" style="font-size:25px;">
+                                        <fa-icon [icon]="faLinkedin"></fa-icon>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="row mt-2 justify-content-center">
+                            <div class="col-9 p-0 " id="inputWithIcon1"><input type="text" class="form-control"
+                                    placeholder="Username" formControlName="username" style="padding-left:40px;">
+                                <fa-icon [icon]="faUser"></fa-icon>
+                                <label for="" style="color: red; font-size: small" *ngIf="
+                                fbFormGroup.get('username').invalid &&  fbFormGroup.get('username').touched ">*
+                                    Username is required</label>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2 justify-content-center ">
+                            <div class="col-9 p-0 " id="inputWithIcon2"><input type="email" class="form-control"
+                                    placeholder="Email" formControlName="email" style="padding-left:40px;">
+                                <fa-icon [icon]="faEnvelope"></fa-icon>
+                                <label for="" style="color: red; font-size: small" *ngIf="
+                                fbFormGroup.get('email').invalid &&  fbFormGroup.get('email').touched ">*
+                                    Email address is required</label>
+                            </div>
+                        </div>
+                        <div class=" row mt-2 justify-content-center">
+                            <div class="col-9 p-0" id="inputWithIcon3"><input type="password" class="form-control"
+                                    placeholder="Password" formControlName="password" style="padding-left:40px;">
+                                <fa-icon [icon]="faLock"></fa-icon>
+                                <label for="" style="color: red; font-size: small" *ngIf="
+                                fbFormGroup.get('password').invalid &&  fbFormGroup.get('password').touched ">*
+                                    Password is required</label>
+                            </div>
+                        </div>
+                        <!-------->
+
+                        <!-------->
+                        <div class="row mt-2 justify-content-center">
+                            <div class="col-10"><input type="checkbox"> I accept the <span
+                                    style="color:rgb(21, 166, 233); font-size:18px; font-weight: bold;">Terms of
+                                    Use</span>
+                                & <span style="color:rgb(21, 166, 233); font-size:18px;font-weight: bold;">Privacy
+                                    Policy.</span>
+                            </div>
+                        </div>
+                        <!------>
+
+                        <div class=" row mt-2 justify-content-center">
+                            <div class="col-4 p-0"><button type="submit"
+                                    class="btn btn-outline-primary btn-primary btn-block"
+                                    [disabled]="!fbFormGroup.valid" (click)="registerHere()"
+                                    style="color:white; font-weight: bold;">SIGN
+                                    UP</button></div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

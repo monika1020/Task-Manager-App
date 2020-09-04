@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="row  sticky-top" style="background:blue; height: 100px;">
+        <div class="col ml-5 d-flex align-items-center"
+            style="color:white;font-size:28px;font-family:verdana ; font-weight:bold; ">
+            <img src="/assets/task.jpg" alt="" style="margin-right: 3px; "> Task Manager-App</div>
+
+
+        <div class="col nav-bar d-flex   justify-content-end align-items-center">
+
+            <a class="btn btn-outline-light mr-1" routerLink="/home/" style="color:black;">Home
+            </a>
+
+
+        </div>
+    </div>
+
+
+    <!-------->
+    <div class="row  justify-content-center  align-items-center  text-light"
+        style="height:75px; background: linear-gradient(blue,rgb(136, 136, 241));">
+        <button class="btn btn-outline-warning btn-lg">ADD YOUR TASK</button></div>
+    <!------->
+    <div class="row mb-1" [formGroup]="fbFormGroup" style="height:100px;">
+        <div class="col-3 d-none col-md-3 d-md-block"></div>
+        <div class="col-12 col-md-6 bg-secondary d-flex justify-content-between align-items-center ">
+
+            <input [(ngModel)]="newTask" class="form-control mr-1" type="text" formControlName="task"
+                placeholder="Enter Task Here">
+            <button (click)="addTask()" class="btn btn-danger"> ADD</button>
+        </div>
+        <div class="col-3 d-none col-md-3 d-md-block"></div>
+
+
+    </div>
+    <!----->
+    <div *ngFor="let item of list; let index=index;" class="row mb-1" style="height:100px;">
+        <div class="col-3 d-none col-md-3 d-md-block"></div>
+        <div class="col-12 col-md-6 bg-secondary d-flex justify-content-between align-items-center ">
+
+            <div class="text-light h3">{{item}}</div>
+            <button (click)="deleteTask(index)" class="btn btn-danger">DEL</button>
+        </div>
+        <div class="col-3 d-none col-md-3 d-md-block"></div>
+
+
+    </div>
+</div>

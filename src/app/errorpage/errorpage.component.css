@@ -1,0 +1,18 @@
+.errorimg{
+    height:100vh;
+    background-image:url("/assets/error1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .goto{
+     margin-top: 63vh;
+     margin-left: 21vw;
+     background: none;
+     font-size: 25px;
+    outline: none;
+     border: none;
+     color:red;
+   
+     
+  }

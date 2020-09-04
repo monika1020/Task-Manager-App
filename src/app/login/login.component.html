@@ -1,0 +1,115 @@
+<div class="container-fluid">
+    <div class="desktop">
+        <div class="bg">
+            <div class="row " style="height:100px; color:white;">
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <!---2 row----->
+            <div class="row mt-3 justify-content-center ">
+                <div class="col-12 col-md-6 d-flex flex-column" [formGroup]="fbFormGroup" style="color:white;">
+                    <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+                        <fa-icon [icon]="faExclamationCircle" style="color:red; font-size:20px;"></fa-icon>
+                        Sorry, that wasn't valid signin.Please try again.
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-6  " style="background:rgba(255,255,255,0.07);height:410px; padding:2px;">
+                            <!------->
+                            <div class="row mt-3">
+                                <div class="col d-flex  justify-content-center align-items-center"
+                                    (click)="loginProcessHere()" style="font-weight: bold; font-size:30px;">Sign
+                                    In
+                                </div>
+                            </div>
+
+                            <div class="row  mt-2 justify-content-center " style="font-size:15px;">
+                                <div class="col-md-6">
+                                    <div class="row justify-content-center" id="social-media">
+                                        <div class="col " id="fb" style=" font-size:25px;">
+                                            <fa-icon [icon]="faFacebook"></fa-icon>
+
+
+                                        </div>
+                                        <div class="col" id="google" style=" font-size:25px;">
+                                            <fa-icon [icon]="faGoogle"></fa-icon>
+                                        </div>
+                                        <div class="col" id="linkedin" style="font-size:25px;">
+                                            <fa-icon [icon]="faLinkedin"></fa-icon>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row mt-4 justify-content-center ">
+                                <div class="col-9 p-0 " id="inputWithIcon2"><input type="email" class="form-control"
+                                        placeholder="Email" formControlName="email" style="padding-left:40px;">
+                                    <fa-icon [icon]="faEnvelope"></fa-icon>
+                                    <label for="" style="color: red; font-size: small" *ngIf="
+                                       fbFormGroup.get('email').invalid &&  fbFormGroup.get('email').touched ">*
+                                        Email address is required</label>
+                                </div>
+                            </div>
+                            <div class="row mt-3 justify-content-center">
+                                <div class="col-9 p-0" id="inputWithIcon3"><input type="password" class="form-control"
+                                        placeholder="Password" formControlName="password" style="padding-left:40px;">
+                                    <fa-icon [icon]="faLock"></fa-icon>
+                                    <label for="" style="color: red; font-size: small" *ngIf="
+                                       fbFormGroup.get('password').invalid &&  fbFormGroup.get('password').touched ">*
+                                        Password is required</label>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col" style="margin-left:55px;"><input type="checkbox"
+                                        class="form-check-input">
+                                    Remember me!!</div>
+                            </div>
+                            <!-------->
+                            <div class="row mt-3 justify-content-center">
+                                <div class="col-4 p-0"><button type="submit"
+                                        class="btn btn-outline-primary  btn-primary btn-block"
+                                        [disabled]="!fbFormGroup.valid" (click)="loginProcessHere()"
+                                        style="color:white; font-weight: bold;">SIGN
+                                        IN</button></div>
+                            </div>
+                            <!------->
+                            <div class="row mt-2">
+                                <div class="col d-flex justify-content-center"
+                                    style="font-size:15px; text-decoration: none;"><a routerLink="/forgot">Forgot
+                                        Password?</a>
+                                </div>
+                            </div>
+                            <!------->
+                        </div>
+                        <!-------->
+                        <div class="col-6 flex-column d-flex justify-content-center align-items-center "
+                            style="color:white; background: linear-gradient(#e96710,rgb(255, 0, 55),#ff008c);height:410px;">
+                            <div class="row mt-4 justify-content-center">
+                                <div class="col d-flex justify-content-center align-items-center"
+                                    style="font-weight: bold; font-size:30px; font-family:'poppins',sans-serif;">
+                                    Hello,Friend!</div>
+                            </div>
+                            <div class="row mt-3 ">
+                                <div class="col d-flex flex-column justify-content-center">
+                                    Enter your details and
+                                    start your journey with us</div>
+                            </div>
+
+
+                            <div class="row mt-3 justify-content-center">
+                                <div class="col-12 p-0"><button class="btn btn-outline-primary btn-block"
+                                        (click)="SignupHere()"
+                                        style="color:white; padding:8px 25px; font-weight: bold;  ">SIGN
+                                        UP</button></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

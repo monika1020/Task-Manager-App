@@ -1,0 +1,43 @@
+.desktop{
+    height:100vh;
+    background-image:url("/assets/login.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #fb fa-icon{
+    color:hsl(197, 100%, 50%);
+  }
+  #google fa-icon{
+    color:red;
+  }
+  #linkedin fa-icon{
+    color:yellow;
+  }
+  #inputWithIcon1 fa-icon{
+    position: absolute;
+    left:0;
+    top:6px;
+    color:#aaa;
+    
+    padding:0px 8px;
+  }
+
+  #inputWithIcon2 fa-icon{
+    position: absolute;
+    left:0;
+    top:6px;
+    color:#aaa;
+    padding:0px 8px;
+  }
+  #inputWithIcon3 fa-icon{
+    position: absolute;
+    left:0;
+    top:6px;
+    color:#aaa;
+    padding:0px 8px;
+  }
+  
+  

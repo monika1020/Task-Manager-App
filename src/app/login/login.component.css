@@ -1,0 +1,33 @@
+.desktop{
+  height:100vh;
+  background-image:url("/assets/login.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#fb fa-icon{
+  color:hsl(197, 100%, 50%);
+}
+#google fa-icon{
+  color:red;
+}
+#linkedin fa-icon{
+  color:yellow;
+}
+#inputWithIcon2 fa-icon{
+  position: absolute;
+  left:0;
+  top:6px;
+  color:#aaa;
+  
+  padding:0px 8px;
+}
+#inputWithIcon3 fa-icon{
+  position: absolute;
+  left:0;
+  top:6px;
+  color:#aaa;
+  font-size:20px;
+  padding:0px 8px;
+}
+
